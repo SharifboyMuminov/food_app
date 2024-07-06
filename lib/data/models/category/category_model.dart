@@ -1,7 +1,7 @@
 class CategoryModel {
   final String title;
   final String imagePath;
-  final int productCount;
+  final num productCount;
 
   CategoryModel({
     required this.title,

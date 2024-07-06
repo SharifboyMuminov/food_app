@@ -19,6 +19,8 @@ class SearchInput extends StatelessWidget {
         color: AppColors.c2D0C57,
       ),
       decoration: InputDecoration(
+        filled: true,
+        fillColor: AppColors.white,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(27.r),
           borderSide: BorderSide(color: AppColors.cD9D0E3F, width: 1.we),

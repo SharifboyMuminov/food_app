@@ -1,4 +1,5 @@
 import 'package:food_app/data/models/category/category_model.dart';
+import 'package:food_app/data/models/sub_category/sub_category_model.dart';
 
 List<CategoryModel> categories = [
   CategoryModel(
@@ -51,5 +52,37 @@ List<CategoryModel> categories = [
     productCount: 43,
     imagePath: "assets/images/vegetables.png",
   ),
+];
 
+List<SubCategoryModel> subCategories = [
+  SubCategoryModel(
+    title: "Boston Lettuce",
+    productCount: 1.10,
+    imagePath: "assets/images/img.png",
+  ),
+  SubCategoryModel(
+    title: "Purple Cauliflower",
+    productCount: 1.85,
+    imagePath: "assets/images/img_1.png",
+  ),
+  SubCategoryModel(
+    title: "Savoy Cabbage",
+    productCount: 1.45,
+    imagePath: "assets/images/img_2.png",
+  ),
+  SubCategoryModel(
+    title: "Boston Lettuce",
+    productCount: 1.10,
+    imagePath: "assets/images/img.png",
+  ),
+  SubCategoryModel(
+    title: "Purple Cauliflower",
+    productCount: 1.85,
+    imagePath: "assets/images/img_1.png",
+  ),
+  SubCategoryModel(
+    title: "Savoy Cabbage",
+    productCount: 1.45,
+    imagePath: "assets/images/img_2.png",
+  ),
 ];
