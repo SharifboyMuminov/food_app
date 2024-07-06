@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_app/screens/widget/global_button.dart';
 import 'package:food_app/utils/app_colors.dart';
 import 'package:food_app/utils/app_size.dart';
 import 'package:food_app/utils/app_text_style.dart';
@@ -83,17 +84,16 @@ class _SplashScreenState extends State<SplashScreen> {
                         ),
                       ),
                       45.getH(),
-                      TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: AppColors.c0BCE83,
-                        ),
-                        onPressed: () {},
-                        child: Text(
-                          "order now".toUpperCase(),
-                          style: AppTextStyle.seoulNamsanSemiBold.copyWith(
-                            fontSize: 15.sp,
-                            color: AppColors.white,
-                          ),
+                      GlobalMyButton(
+                        onTab: () {},
+                        title: "order now".toUpperCase(),
+                      ),
+                      32.getH(),
+                      Text(
+                        "dismiss".toUpperCase(),
+                        style: AppTextStyle.seoulNamsanSemiBold.copyWith(
+                          fontSize: 15.sp,
+                          color: AppColors.c9586A8,
                         ),
                       ),
                     ],
