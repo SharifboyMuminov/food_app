@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/data/local/local_varibals.dart';
 import 'package:food_app/screens/tab_box/categories/widget/category_item.dart';
+import 'package:food_app/screens/tab_box/sub_categories/sab_categories_screen.dart';
 import 'package:food_app/screens/tab_box/widget/search_input.dart';
 import 'package:food_app/utils/app_colors.dart';
 import 'package:food_app/utils/app_size.dart';
@@ -50,7 +51,16 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
               ),
               itemBuilder: (BuildContext context, int index) {
                 return CategoryItem(
-                  onTab: () {},
+                  onTab: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const SabCategoriesScreen();
+                        },
+                      ),
+                    );
+                  },
                   categoryModel: categories[index],
                 );
               },
