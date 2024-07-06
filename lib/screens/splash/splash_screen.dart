@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_app/screens/tab_box/tab_box.dart';
 import 'package:food_app/screens/widget/global_button.dart';
 import 'package:food_app/utils/app_colors.dart';
 import 'package:food_app/utils/app_size.dart';
@@ -85,7 +86,16 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                       45.getH(),
                       GlobalMyButton(
-                        onTab: () {},
+                        onTab: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const TabBox();
+                              },
+                            ),
+                          );
+                        },
                         title: "order now".toUpperCase(),
                       ),
                       32.getH(),
