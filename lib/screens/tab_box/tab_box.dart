@@ -32,7 +32,7 @@ class _TabBoxState extends State<TabBox> {
       ),
       bottomNavigationBar: DecoratedBox(
         decoration: BoxDecoration(
-          color: CupertinoColors.tertiarySystemFill,
+          color: CupertinoColors.systemGroupedBackground,
           border: Border(
             top: BorderSide(
               color: AppColors.cD9D0E3F,
