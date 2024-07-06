@@ -38,6 +38,7 @@ class GlobalMyButton extends StatelessWidget {
               iconPath,
               width: 20.we,
               height: 20.we,
+              colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),
             ),
           if (iconPath.isNotEmpty) 16.getW(),
           Text(

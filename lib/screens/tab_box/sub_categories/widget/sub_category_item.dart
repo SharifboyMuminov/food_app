@@ -29,7 +29,7 @@ class SubCategoryItem extends StatelessWidget {
           borderRadius: BorderRadius.zero,
         ),
       ),
-      onPressed: () {},
+      onPressed: onTab,
       child: SizedBox(
         height: 128.he,
         child: Row(

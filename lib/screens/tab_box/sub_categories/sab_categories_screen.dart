@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_app/data/local/local_varibals.dart';
+import 'package:food_app/screens/tab_box/details/details_screen.dart';
 import 'package:food_app/screens/tab_box/sub_categories/widget/filter_item.dart';
 import 'package:food_app/screens/tab_box/sub_categories/widget/sub_category_item.dart';
 import 'package:food_app/screens/tab_box/widget/search_input.dart';
@@ -121,7 +122,18 @@ class _SabCategoriesScreenState extends State<SabCategoriesScreen> {
                     itemBuilder: (BuildContext context, int index) {
                       return SubCategoryItem(
                         subCategoryModel: subCategories[index],
-                        onTab: () {},
+                        onTab: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return DetailsScreen(
+                                  subCategoryModel: subCategories[index],
+                                );
+                              },
+                            ),
+                          );
+                        },
                         onTabFavorite: () {},
                         onTabAddToBasket: () {},
                       );
