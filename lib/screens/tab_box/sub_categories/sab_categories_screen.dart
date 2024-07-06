@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_app/data/local/local_varibals.dart';
+import 'package:food_app/screens/tab_box/sub_categories/widget/filter_item.dart';
 import 'package:food_app/screens/tab_box/sub_categories/widget/sub_category_item.dart';
 import 'package:food_app/screens/tab_box/widget/search_input.dart';
 import 'package:food_app/utils/app_colors.dart';
@@ -16,6 +17,19 @@ class SabCategoriesScreen extends StatefulWidget {
 }
 
 class _SabCategoriesScreenState extends State<SabCategoriesScreen> {
+  List<String> filterOne = [
+    "Сabbage and lettuce (14)",
+    "Сucumbers and tomatoes (10)",
+  ];
+  List<String> filterTwo = [
+    "Oinons and garlic (8)",
+    "Peppers (7)",
+    "Potatoes and carrots (4)",
+  ];
+
+  int activeFilterOne = -1;
+  int activeFilterTwo = -1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +53,7 @@ class _SabCategoriesScreenState extends State<SabCategoriesScreen> {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.we),
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.pop(context),
                     icon: Icon(
                       Icons.arrow_back_ios_new,
                       size: 22.sp,
@@ -63,8 +77,46 @@ class _SabCategoriesScreenState extends State<SabCategoriesScreen> {
                   child: SearchInput(onChanged: (String value) {}),
                 ),
                 40.getH(),
+                SingleChildScrollView(
+                  padding: EdgeInsets.symmetric(horizontal: 16.we),
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: List.generate(
+                      filterOne.length,
+                      (index) {
+                        return FilterItem(
+                          onTab: () {
+                            setState(() => activeFilterOne = index);
+                          },
+                          title: filterOne[index],
+                          isActive: activeFilterOne == index,
+                        );
+                      },
+                    ),
+                  ),
+                ),
+                20.getH(),
+                SingleChildScrollView(
+                  padding: EdgeInsets.symmetric(horizontal: 16.we),
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: List.generate(
+                      filterTwo.length,
+                      (index) {
+                        return FilterItem(
+                          onTab: () {
+                            setState(() => activeFilterTwo = index);
+                          },
+                          title: filterTwo[index],
+                          isActive: activeFilterTwo == index,
+                        );
+                      },
+                    ),
+                  ),
+                ),
                 Expanded(
                   child: ListView.builder(
+                    padding: EdgeInsets.symmetric(vertical: 32.he),
                     itemCount: subCategories.length,
                     itemBuilder: (BuildContext context, int index) {
                       return SubCategoryItem(
