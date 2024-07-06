@@ -17,11 +17,11 @@ class SabCategoriesScreen extends StatefulWidget {
 }
 
 class _SabCategoriesScreenState extends State<SabCategoriesScreen> {
-  List<String> filterOne = [
+  final List<String> filterOne = [
     "Сabbage and lettuce (14)",
     "Сucumbers and tomatoes (10)",
   ];
-  List<String> filterTwo = [
+  final List<String> filterTwo = [
     "Oinons and garlic (8)",
     "Peppers (7)",
     "Potatoes and carrots (4)",
