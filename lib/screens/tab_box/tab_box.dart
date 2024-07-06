@@ -31,13 +31,22 @@ class _TabBoxState extends State<TabBox> {
         children: _screens,
       ),
       bottomNavigationBar: DecoratedBox(
-        decoration: BoxDecoration(color: CupertinoColors.tertiarySystemFill),
+        decoration: BoxDecoration(
+          color: CupertinoColors.tertiarySystemFill,
+          border: Border(
+            top: BorderSide(
+              color: AppColors.cD9D0E3F,
+              width: 1.we,
+            ),
+          ),
+        ),
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 22.he),
+          padding: EdgeInsets.symmetric(vertical: 12.he),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               IconButton(
+                padding: EdgeInsets.all(20.we),
                 onPressed: () {
                   setState(() {
                     _activePage = 0;
@@ -54,6 +63,7 @@ class _TabBoxState extends State<TabBox> {
                 ),
               ),
               IconButton(
+                padding: EdgeInsets.all(20.we),
                 onPressed: () {
                   setState(() {
                     _activePage = 1;
@@ -70,6 +80,7 @@ class _TabBoxState extends State<TabBox> {
                 ),
               ),
               IconButton(
+                padding: EdgeInsets.all(20.we),
                 onPressed: () {
                   setState(() {
                     _activePage = 2;
