@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/screens/tab_box/checkout/widget/change.dart';
+import 'package:food_app/screens/tab_box/checkout/widget/check_box.dart';
 import 'package:food_app/screens/tab_box/checkout/widget/main_button.dart';
 import 'package:food_app/utils/app_colors.dart';
 import 'package:food_app/utils/app_size.dart';
@@ -16,11 +17,13 @@ class CheckoutScreen extends StatefulWidget {
 class _CheckoutScreenState extends State<CheckoutScreen> {
   int activeDeliveryOptionsIndex = 0;
 
+  bool isSwitched = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.white,
+        backgroundColor: AppColors.cF6F5F5,
         centerTitle: true,
         title: Text(
           "Checkout",
@@ -101,6 +104,30 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     },
                     title: 'By Drone',
                     iconPath: 'assets/icons/drone.svg',
+                  ),
+                  40.getH(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.we),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Non-contact-delivery",
+                          style: AppTextStyle.seoulNamsanBold.copyWith(
+                            fontSize: 22.sp,
+                            color: AppColors.c2D0C57,
+                          ),
+                        ),
+                        MyCheckBox(
+                          isSwitched: isSwitched,
+                          onTab: () {
+                            setState(() {
+                              isSwitched = !isSwitched;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
