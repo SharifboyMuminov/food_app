@@ -19,7 +19,10 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.cF6F5F5,
       appBar: AppBar(
+        backgroundColor: AppColors.cF6F5F5,
+        elevation: 0,
         centerTitle: false,
         title: Padding(
           padding: EdgeInsets.only(left: 6.we),
