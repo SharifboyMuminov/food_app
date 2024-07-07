@@ -105,7 +105,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 15.getH(),
                                 RichText(
                                   text: TextSpan(
-                                    text: "1.10",
+                                    text: widget.subCategoryModel.productCount
+                                        .toString(),
                                     style: AppTextStyle.seoulNamsanSemiBold
                                         .copyWith(
                                       fontSize: 32.sp,
