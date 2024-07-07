@@ -125,6 +125,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                               isSwitched = !isSwitched;
                             });
                           },
+
                         ),
                       ],
                     ),
