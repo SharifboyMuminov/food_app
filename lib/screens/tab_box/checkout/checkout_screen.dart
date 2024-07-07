@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/screens/tab_box/checkout/widget/change.dart';
 import 'package:food_app/screens/tab_box/checkout/widget/check_box.dart';
 import 'package:food_app/screens/tab_box/checkout/widget/main_button.dart';
+import 'package:food_app/screens/tab_box/payment/payment_screen.dart';
 import 'package:food_app/utils/app_colors.dart';
 import 'package:food_app/utils/app_size.dart';
 import 'package:food_app/utils/app_text_style.dart';
@@ -56,7 +57,18 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               padding: EdgeInsets.symmetric(vertical: 24.he),
               child: Column(
                 children: [
-                  ChangeView(onTabChange: () {}, title: 'Payment method'),
+                  ChangeView(
+                      onTabChange: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const PaymentScreen();
+                            },
+                          ),
+                        );
+                      },
+                      title: 'Payment method'),
                   16.getH(),
                   MyMainButton(
                     onTab: () {},
@@ -125,7 +137,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                               isSwitched = !isSwitched;
                             });
                           },
-
                         ),
                       ],
                     ),
