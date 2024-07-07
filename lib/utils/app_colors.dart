@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
+
 class AppColors {
   AppColors._();
 
@@ -16,4 +18,14 @@ class AppColors {
   static const Color c6C0EE4 = Color(0xFF6C0EE4);
   static const Color cE2CBFF = Color(0xFFE2CBFF);
   static const Color c06BE77 = Color(0xFF06BE77);
+  static const Color c4D05A9 = Color(0xFF4D05A9);
+
+  static LinearGradient cardLinearGradient = const LinearGradient(
+    colors: [
+      Color(0xFFB993D6),
+      Color(0xFF8CA6DB),
+    ],
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+  );
 }
